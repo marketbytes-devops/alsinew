@@ -1,0 +1,632 @@
+[
+  {
+    "routePath": "/courier-and-cargo-services-from-qatar-to-jordan",
+    "component": "QatarToJordan",
+    "file": "LandingPage/QatarToJordan"
+  },
+  {
+    "routePath": "/courier-and-cargo-services-saudi-to-turkey",
+    "component": "Turkey",
+    "file": "LandingPage/Turkey"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-oman-to-israel",
+    "component": "Israel",
+    "file": "LandingPage/Israel"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-qatar-malaysia",
+    "component": "Malaysia",
+    "file": "LandingPage/Malaysia"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-oman-brazil",
+    "component": "Brazil",
+    "file": "LandingPage/Brazil"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-dubai-cambodia",
+    "component": "Cambodia",
+    "file": "LandingPage/Cambodia"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-saudi-armenia",
+    "component": "Armenia",
+    "file": "LandingPage/Armenia"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-dubai-belgium",
+    "component": "DubaiToBelgium",
+    "file": "LandingPage/DubaiToBelgium"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-qatar-italy",
+    "component": "Italy",
+    "file": "LandingPage/Italy"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-oman-kuwait",
+    "component": "Kuwait",
+    "file": "LandingPage/Kuwait"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-dubai-austria",
+    "component": "Austria",
+    "file": "LandingPage/Austria"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-saudi-kenya",
+    "component": "Kenya",
+    "file": "LandingPage/Kenya"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-qatar-australia",
+    "component": "Australia",
+    "file": "LandingPage/Australia"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-oman-portugal",
+    "component": "Portugal",
+    "file": "LandingPage/Portugal"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-from-dubai-to-myanmar",
+    "component": "Myanmar",
+    "file": "LandingPage/Myanmar"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-saudi-france",
+    "component": "France",
+    "file": "LandingPage/France"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-qatar-philippines",
+    "component": "Philippines",
+    "file": "LandingPage/Philippines"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-oman-morocco",
+    "component": "Morocco",
+    "file": "LandingPage/Morocco"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-saudi-india",
+    "component": "SaudiToIndia",
+    "file": "LandingPage/SaudiToIndia"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-dubai-bangladesh",
+    "component": "DubaiToBangladesh",
+    "file": "LandingPage/DubaiToBangladesh"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-qatar-to-albania",
+    "component": "Albania",
+    "file": "LandingPage/Albania"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-qatar-colombia",
+    "component": "Colombia",
+    "file": "LandingPage/Colombia"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-oman-to-chile",
+    "component": "Chile",
+    "file": "LandingPage/Chile"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-dubai-algeria",
+    "component": "DubaiToAlgeria",
+    "file": "LandingPage/DubaiToAlgeria"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-saudi-bahamas",
+    "component": "SaudiToBahamas",
+    "file": "LandingPage/Bahamas"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-qatar-barbados",
+    "component": "QatarToBarbados",
+    "file": "LandingPage/QatarToBarbados"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-oman-belarus",
+    "component": "OmanToBelarus",
+    "file": "LandingPage/OmanToBelarus"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-dubai-bhutan",
+    "component": "DubaiToBhutan",
+    "file": "LandingPage/DubaiToBhutan"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-saudi-bolivia",
+    "component": "SaudiToBolivia",
+    "file": "LandingPage/SaudiToBolivia"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-qatar-andorra",
+    "component": "QatarToAndorra",
+    "file": "LandingPage/QatarToAndorra"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-oman-germany",
+    "component": "OmanToGermanyCargo",
+    "file": "LandingPage/OmanToGermanyCargo"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-dubai-cameroon",
+    "component": "DubaiToCameroon",
+    "file": "LandingPage/DubaiToCameroon"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-saudi-fiji",
+    "component": "SaudiToFiji",
+    "file": "LandingPage/SaudiToFiji"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-qatar-belize",
+    "component": "QatarToBelize",
+    "file": "LandingPage/QatarToBelize"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-oman-benin",
+    "component": "OmanToBenin",
+    "file": "LandingPage/OmanToBenin"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-from-dubai-to-georgia",
+    "component": "DubaiToGeorgia",
+    "file": "LandingPage/DubaiToGeorgia"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-saudi-ireland",
+    "component": "SaudiToIreland",
+    "file": "LandingPage/SaudiToIreland"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-qatar-cyprus",
+    "component": "QatarToCyprus",
+    "file": "LandingPage/QatarToCyprus"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-oman-denmark",
+    "component": "OmanToDenmark",
+    "file": "LandingPage/OmanToDenmark"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-from-dubai-to-ethiopia",
+    "component": "DubaiToEthiopiaCargo",
+    "file": "LandingPage/DubaiToEthiopiaCargo"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-from-saudi-to-iceland",
+    "component": "SaudiToIceland",
+    "file": "LandingPage/SaudiToIceland"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-qatar-hungary",
+    "component": "QatarToHungary",
+    "file": "LandingPage/QatarToHungary"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-oman-japan",
+    "component": "OmanToJapan",
+    "file": "LandingPage/OmanToJapan"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-dubai-to-new-zealand",
+    "component": "DubaiToNewZealand",
+    "file": "LandingPage/DubaiToNewZealand"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-saudi-to-norway",
+    "component": "SaudiToNorway",
+    "file": "LandingPage/SaudiToNorway"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-oman-poland",
+    "component": "OmanToPoland",
+    "file": "LandingPage/OmanToPoland"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-qatar-peru",
+    "component": "QatarToPeru",
+    "file": "LandingPage/QatarToPeru"
+  },
+  {
+    "routePath": "/door-to-door-cargo-services-qatar-to-algeria",
+    "component": "QatarToAlgeria",
+    "file": "LandingPage/QatarToAlgeria"
+  },
+  {
+    "routePath": "/door-to-door-cargo-services-qatar-to-armenia",
+    "component": "QatarToArmenia",
+    "file": "LandingPage/QatarToArmenia"
+  },
+  {
+    "routePath": "/door-to-door-cargo-services-oman-to-algeria",
+    "component": "OmanToAlgeria",
+    "file": "LandingPage/OmanToAlgeria"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-from-oman-to-armenia",
+    "component": "OmanToArmenia",
+    "file": "LandingPage/OmanToArmenia"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-dubai-to-china",
+    "component": "DubaiToChina",
+    "file": "LandingPage/DubaiToChina"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-qatar-to-india",
+    "component": "QatarToIndia",
+    "file": "LandingPage/QatarToIndia"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-oman-to-pakistan",
+    "component": "OmanToPakistan",
+    "file": "LandingPage/OmanToPakistan"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-dubai-to-pakistan",
+    "component": "DubaiToPakistan",
+    "file": "LandingPage/DubaiToPakistan"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-dubai-to-nepal",
+    "component": "DubaiToNepal",
+    "file": "LandingPage/DubaiToNepal"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-oman-to-bolivia",
+    "component": "OmanToBolivia",
+    "file": "LandingPage/OmanToBolivia"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-oman-to-bhutan",
+    "component": "OmanToBhutan",
+    "file": "LandingPage/OmanToBhutan"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-oman-to-bangladesh",
+    "component": "OmanToBangladesh",
+    "file": "LandingPage/OmanToBangladesh"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-oman-to-canada",
+    "component": "OmanToCanada",
+    "file": "LandingPage/OmanToCanada"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-oman-to-china",
+    "component": "OmanToChina",
+    "file": "LandingPage/OmanToChina"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-qatar-to-bhutan",
+    "component": "QatarToBhutan",
+    "file": "LandingPage/QatarToBhutan"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-qatar-to-bolivia",
+    "component": "QatarToBolivia",
+    "file": "LandingPage/QatarToBolivia"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-qatar-to-bangladesh",
+    "component": "QatarToBangladesh",
+    "file": "LandingPage/QatarToBangladesh"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-qatar-to-bahrain",
+    "component": "QatarToBahrain",
+    "file": "LandingPage/QatarToBahrain"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-saudi-arabia-to-algeria",
+    "component": "SaudiToAlgeria",
+    "file": "LandingPage/SaudiToAlgeria"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-services-saudi-arabia-to-albania",
+    "component": "SaudiToAlbania",
+    "file": "LandingPage/SaudiToAlbania"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-oman-to-india",
+    "component": "OmanToIndia",
+    "file": "LandingPage/OmanToIndia"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-dubai-to-india",
+    "component": "DubaiToIndia",
+    "file": "LandingPage/DubaiToIndia"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-saudi-to-china",
+    "component": "SaudiToChina",
+    "file": "LandingPage/SaudiToChina"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-dubai-to-usa",
+    "component": "DubaiToUsa",
+    "file": "LandingPage/DubaiToUsa"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-oman-to-usa",
+    "component": "OmanToUsa",
+    "file": "LandingPage/OmanToUsa"
+  },
+  {
+    "routePath": "/door-to-door-courier-cargo-qatar-to-usa",
+    "component": "QatarToUsa",
+    "file": "LandingPage/QatarToUsa"
+  },
+  {
+    "routePath": "/door-to-door-cargo-oman-to-ukraine-alsi",
+    "component": "OmanToUkraine",
+    "file": "LandingPage/OmanToUkraine"
+  },
+  {
+    "routePath": "/uae-to-uganda-door-to-door-courier-cargo-services",
+    "component": "UaeToUganda",
+    "file": "LandingPage/UaeToUganda"
+  },
+  {
+    "routePath": "/qatar-to-ireland-door-to-door-cargo-services",
+    "component": "QatarToIreland",
+    "file": "LandingPage/QatarToIreland"
+  },
+  {
+    "routePath": "/qatar-to-iraq-door-to-door-cargo-services",
+    "component": "QatarToIraq",
+    "file": "LandingPage/QatarToIraq"
+  },
+  {
+    "routePath": "/qatar-to-ukraine-door-to-door-cargo-services",
+    "component": "QatarToUkraine",
+    "file": "LandingPage/QatarToUkraine"
+  },
+  {
+    "routePath": "/oman-to-new-zealand-door-to-door-cargo-services",
+    "component": "OmanToNewZealand",
+    "file": "LandingPage/OmanToNewZealand"
+  },
+  {
+    "routePath": "/saudi-to-uzbekistan-door-to-door-cargo-services",
+    "component": "SaudiToUzbekistan",
+    "file": "LandingPage/SaudiToUzbekistan"
+  },
+  {
+    "routePath": "/dubai-to-uruguay-door-to-door-cargo-services",
+    "component": "DubaiToUruguay",
+    "file": "LandingPage/DubaiToUruguay"
+  },
+  {
+    "routePath": "/qatar-to-georgia-door-to-door-cargo-services",
+    "component": "QatarToGeorgia",
+    "file": "LandingPage/QatarToGeorgia"
+  },
+  {
+    "routePath": "/qatar-to-vietnam-door-to-door-cargo-services",
+    "component": "QatarToVietnam",
+    "file": "LandingPage/QatarToVietnam"
+  },
+  {
+    "routePath": "/saudi-arabia-to-ukraine-door-to-door-cargo-services",
+    "component": "SaudiArabiaToUkraine",
+    "file": "LandingPage/SaudiArabiaToUkraine"
+  },
+  {
+    "routePath": "/dubai-to-iceland-door-to-door-cargo-services",
+    "component": "DubaiToIceland",
+    "file": "LandingPage/DubaiToIceland"
+  },
+  {
+    "routePath": "/qatar-to-bulgaria-door-to-door-cargo-services",
+    "component": "QatarToBulgaria",
+    "file": "LandingPage/QatarToBulgaria"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-from-qatar-to-burundi",
+    "component": "QatarToBurundi",
+    "file": "LandingPage/QatarToBurundi"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-from-qatar-to-botswana",
+    "component": "QatarToBotswana",
+    "file": "LandingPage/QatarToBotswana"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-from-oman-to-andorra",
+    "component": "OmanToAndorra",
+    "file": "LandingPage/OmanToAndorra"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-from-oman-to-croatia",
+    "component": "OmanToCroatia",
+    "file": "LandingPage/OmanToCroatia"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-from-uae-to-haiti",
+    "component": "UaeToHaiti",
+    "file": "LandingPage/UaeToHaiti"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-from-uae-to-libya",
+    "component": "UaeToLibya",
+    "file": "LandingPage/UaeToLibya"
+  },
+  {
+    "routePath": "/door-to-door-courier-and-cargo-services-from-uae-to-cuba",
+    "component": "UaeToCuba",
+    "file": "LandingPage/UaeToCuba"
+  },
+  {
+    "routePath": "/commercial-cargo-qatar-to-cabo-verde",
+    "component": "CommercialCargoQatarToCaboVerde",
+    "file": "LandingPage/CommercialCargoQatarToCaboVerde"
+  },
+  {
+    "routePath": "/commercial-cargo-logistics-services-qatar-to-benin",
+    "component": "QatarToBeninCargo",
+    "file": "LandingPage/QatarToBeninCargo"
+  },
+  {
+    "routePath": "/commercial-cargo-logistics-services-qatar-to-costa-rica",
+    "component": "QatarToCostaRicaCargo",
+    "file": "LandingPage/QatarToCostaRicaCargo"
+  },
+  {
+    "routePath": "/commercial-cargo-logistics-services-qatar-to-croatia",
+    "component": "QatarToCroatiaCargo",
+    "file": "LandingPage/QatarToCroatiaCargo"
+  },
+  {
+    "routePath": "/commercial-cargo-oman-central-african-republic",
+    "component": "OmanToCentralAfricanRepublicCargo",
+    "file": "LandingPage/OmanToCentralAfricanRepublicCargo"
+  },
+  {
+    "routePath": "/commercial-cargo-oman-cyprus",
+    "component": "OmanToCyprusCargo",
+    "file": "LandingPage/OmanToCyprusCargo"
+  },
+  {
+    "routePath": "/commercial-cargo-logistics-services-dubai-to-croatia",
+    "component": "DubaiToCroatiaCargo",
+    "file": "LandingPage/DubaiToCroatiaCargo"
+  },
+  {
+    "routePath": "/commercial-cargo-logistics-services-dubai-to-cuba",
+    "component": "DubaiToCubaCargo",
+    "file": "LandingPage/DubaiToCubaCargo"
+  },
+  {
+    "routePath": "/air-freight-services-from-qatar",
+    "component": "AirFreightQatar",
+    "file": "LandingPage/AirFreightQatar"
+  },
+  {
+    "routePath": "/air-freight-services-from-oman",
+    "component": "AirFreightOman",
+    "file": "LandingPage/AirFreightOman"
+  },
+  {
+    "routePath": "/air-freight-services-from-saudi-arabia",
+    "component": "AirFreightSaudi",
+    "file": "LandingPage/AirFreightSaudi"
+  },
+  {
+    "routePath": "/air-freight-services-from-dubai",
+    "component": "AirFreightDubai",
+    "file": "LandingPage/AirFreightDubai"
+  },
+  {
+    "routePath": "/project-cargo-services-in-qatar",
+    "component": "ProjectCargoQatar",
+    "file": "LandingPage/ProjectCargoQatar"
+  },
+  {
+    "routePath": "/project-cargo-services-in-saudi-arabia",
+    "component": "ProjectCargoSaudi",
+    "file": "LandingPage/ProjectCargoSaudi"
+  },
+  {
+    "routePath": "/project-cargo-services-in-india",
+    "component": "ProjectCargoIndia",
+    "file": "LandingPage/ProjectCargoIndia"
+  },
+  {
+    "routePath": "/project-cargo-services-in-america",
+    "component": "ProjectCargoAmerica",
+    "file": "LandingPage/ProjectCargoAmerica"
+  },
+  {
+    "routePath": "/ship-spare-logistics-service-qatar",
+    "component": "ShipSpareLogisticsQatar",
+    "file": "LandingPage/ShipSpareLogisticsQatar"
+  },
+  {
+    "routePath": "/warehouse-distribution-service-qatar",
+    "component": "WarehouseDistributionQatar",
+    "file": "LandingPage/WarehouseDistributionQatar"
+  },
+  {
+    "routePath": "/temperature-controlled-freight-qatar",
+    "component": "TemperatureControlledFreightQatar",
+    "file": "LandingPage/TemperatureControlledFreightQatar"
+  },
+  {
+    "routePath": "/dangerous-goods-cargo-service-qatar",
+    "component": "DangerousGoodsCargoQatar",
+    "file": "LandingPage/DangerousGoodsCargoQatar"
+  },
+  {
+    "routePath": "/saudi-arabia-customs-clearance",
+    "component": "SaudiArabiaCustomsClearance",
+    "file": "LandingPage/SaudiArabiaCustomsClearance"
+  },
+  {
+    "routePath": "/guide-vessel-agency-saudi-arabia",
+    "component": "GuideVesselAgencySaudiArabia",
+    "file": "LandingPage/GuideVesselAgencySaudiArabia"
+  },
+  {
+    "routePath": "/event-logistics-services-qatar",
+    "component": "EventLogisticsServicesQatar",
+    "file": "LandingPage/EventLogisticsServicesQatar"
+  },
+  {
+    "routePath": "/roro-shipping-services-qatar",
+    "component": "RoRoShippingServicesQatar",
+    "file": "LandingPage/RoRoShippingServicesQatar"
+  },
+  {
+    "routePath": "/oil-gas-logistics-services-oman",
+    "component": "OilGasLogisticsServicesOman",
+    "file": "LandingPage/OilGasLogisticsServicesOman"
+  },
+  {
+    "routePath": "/automotive-logistics-services-oman",
+    "component": "AutomotiveLogisticsServicesOman",
+    "file": "LandingPage/AutomotiveLogisticsServicesOman"
+  },
+  {
+    "routePath": "/full-truckload-freight-services-gcc",
+    "component": "FullTruckloadFreightServicesGCC",
+    "file": "LandingPage/FullTruckloadFreightServicesGCC"
+  },
+  {
+    "routePath": "/domestic-road-transportation-services-oman",
+    "component": "DomesticRoadTransportationOman",
+    "file": "LandingPage/DomesticRoadTransportationOman"
+  },
+  {
+    "routePath": "/roro-shipping-services-oman",
+    "component": "RoRoShippingServicesOman",
+    "file": "LandingPage/RoRoShippingServicesOman"
+  },
+  {
+    "routePath": "/chemical-transport-uae",
+    "component": "ChemicalTransportUAE",
+    "file": "LandingPageV1/ChemicalTransportUAE"
+  },
+  {
+    "routePath": "/hazardous-goods-transport-uae",
+    "component": "HazardousTransportUAE",
+    "file": "LandingPageV1/HazardousTransportUAE"
+  },
+  {
+    "routePath": "/industrial-chemical-transport-uae",
+    "component": "IndustrialChemicalTransportUAE",
+    "file": "LandingPageV1/IndustrialChemicalTransportUAE"
+  },
+  {
+    "routePath": "/hazardous-goods-transport-oman",
+    "component": "HazardousGoodsTransportOman",
+    "file": "LandingPageV1/HazardousGoodsTransportOman"
+  }
+]

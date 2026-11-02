@@ -1,0 +1,364 @@
+.font-bold {
+    font-weight: 800;
+    font-size: 40px;
+    white-space: nowrap;
+}
+
+.font-paragraph {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.read-more-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    width: max-content;
+}
+
+.read-more-link:hover {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    width: max-content;
+}
+
+.left-pane .font-paragraph-one {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.readmore-pg {
+    font-family: poppins, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.image-header {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: relative;
+    z-index: 10;
+}
+
+@media (min-width: 360px) and (max-width: 767px) {
+    .image-header {
+        width: 100%;
+        height: 80vh;
+        background-size: 800px;
+        background-position: 70% 0%;
+    }
+
+    .font-bold {
+        font-size: 29px;
+        font-weight: bolder;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+    .image-header {
+        width: 100%;
+        height: 190vh;
+        background-size: 950px;
+        background-position: right top;
+    }
+
+    .font-bold {
+        font-size: 45px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .image-header {
+        width: 100%;
+        height: 100vh;
+        background-size: 1000px;
+        background-position: center top;
+    }
+
+    .font-bold {
+        font-size: 60px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .image-header {
+        width: 100%;
+        height: 95vh;
+        background-size: 1000px;
+        background-position: center top;
+    }
+
+    .font-bold {
+        font-size: 60px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .image-header {
+        width: 100%;
+        height: 100vh;
+        background-size: 820px;
+        background-position: 100% 0%;
+    }
+
+    .font-bold {
+        font-size: 55px;
+        padding-top: 20px;
+    }
+
+    .font-paragraph {
+        font-weight: 400;
+        font-size: 30px;
+        padding-top: 13px;
+    }
+
+    .left-pane .font-paragraph-one {
+        font-size: 15px;
+        font-weight: 500;
+        padding-top: 13px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .image-header {
+        width: 100%;
+        height: 100vh;
+        background-size: 900px;
+        background-position: 100% 0%;
+    }
+
+    .font-bold {
+        font-size: 70px;
+        padding-top: 40px;
+    }
+
+    .font-paragraph {
+        font-weight: 400;
+        font-size: 30px;
+        padding-top: 13px;
+    }
+
+    .left-pane .font-paragraph-one {
+        font-size: 15px;
+        font-weight: 500;
+        padding-top: 13px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .image-header {
+        width: 100%;
+        height: 80vh;
+        background-size: 1150px;
+        background-position: 100% 0%;
+    }
+
+    .font-bold {
+        font-size: 70px;
+    }
+
+    .font-paragraph {
+        font-weight: 400;
+        font-size: 33px;
+        padding-top: 13px;
+    }
+
+    .left-pane .font-paragraph-one {
+        font-size: 18px;
+        font-weight: 500;
+        padding-top: 13px;
+    }
+}
+
+@media (min-width: 1978px) {
+    .image-header {
+        width: 100%;
+        height: 120vh;
+        background-size: 1300px;
+        background-position: 100% 0%;
+    }
+
+    .font-bold {
+        font-size: 100px;
+    }
+
+
+    .font-paragraph {
+        font-weight: 400;
+        font-size: 40px;
+        padding-top: 13px;
+    }
+
+    .left-pane .font-paragraph-one {
+        font-size: 22px;
+        font-weight: 500;
+        padding-top: 13px;
+    }
+}
+
+@media (min-width: 2000px) and (max-width: 2170px) {
+    .image-header {
+        width: 100%;
+        height: 90vh;
+        background-size: 1450px;
+        background-position: 100% 0%;
+    }
+
+    .font-bold {
+        font-size: 85px;
+        padding-top: 100px;
+    }
+
+    .font-paragraph {
+        font-weight: 400;
+        font-size: 40px;
+        padding-top: 13px;
+    }
+
+    .left-pane .font-paragraph-one {
+        font-size: 20px;
+        font-weight: 500;
+        padding-top: 13px;
+    }
+
+    .readmore-pg {
+        font-family: poppins, sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+    }
+}
+
+@media (min-width: 2170px) and (max-width: 2360px) {
+    .image-header {
+        width: 100%;
+        height: 100vh;
+        background-size: 1500px;
+        background-position: 100% 0%;
+    }
+
+    .font-bold {
+        font-size: 100px;
+        padding-top: 100px;
+    }
+
+    .font-paragraph {
+        font-weight: 400;
+        font-size: 50px;
+        padding-top: 13px;
+    }
+
+    .left-pane .font-paragraph-one {
+        font-size: 25px;
+        font-weight: 500;
+        padding-top: 13px;
+    }
+
+    .readmore-pg {
+        font-family: poppins, sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+    }
+}
+
+@media (min-width: 2360px) and (max-width: 2760px) {
+    .image-header {
+        width: 100%;
+        height: 110vh;
+        background-size: 1700px;
+        background-position: 100% 0%;
+    }
+
+    .font-bold {
+        font-size: 110px;
+        padding-top: 100px;
+    }
+
+    .font-paragraph {
+        font-weight: 400;
+        font-size: 50px;
+        padding-top: 13px;
+    }
+
+    .left-pane .font-paragraph-one {
+        font-size: 25px;
+        font-weight: 500;
+        padding-top: 13px;
+    }
+
+    .readmore-pg {
+        font-family: poppins, sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+    }
+}
+
+@media (min-width: 2760px) and (max-width: 3000px) {
+    .image-header {
+        width: 100%;
+        height: 115vh;
+        background-size: 1950px;
+        background-position: 100% 0%;
+    }
+
+    .font-bold {
+        font-size: 130px;
+        padding-top: 130px;
+    }
+
+    .font-paragraph {
+        font-weight: 400;
+        font-size: 60px;
+        padding-top: 13px;
+    }
+
+    .left-pane .font-paragraph-one {
+        font-size: 28px;
+        font-weight: 500;
+        padding-top: 13px;
+    }
+
+    .readmore-pg {
+        font-family: poppins, sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+    }
+}
+
+@media (min-width: 3000px) and (max-width: 3054px) {
+    .image-header {
+        width: 100%;
+        height: 120vh;
+        background-size: 1950px;
+        background-position: 100% 0%;
+    }
+
+    .font-bold {
+        font-size: 145px;
+        padding-top: 130px;
+    }
+
+    .font-paragraph {
+        font-weight: 400;
+        font-size: 70px;
+        padding-top: 13px;
+    }
+
+    .left-pane .font-paragraph-one {
+        font-size: 30px;
+        font-weight: 500;
+        padding-top: 13px;
+    }
+
+    .readmore-pg {
+        font-family: poppins, sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,63 @@
+'use client';
+
+import React, { useEffect, useState } from "react";
+import storyBg from "../../../../assets/images/About/about-story.webp";
+import apiClient from "../../../../api";
+
+const Story = () => {
+  const [storyData, setStoryData] = useState(null);
+
+  useEffect(() => {
+    apiClient.get("/about/our-story/")
+      .then((response) => {
+        if (response.data.length > 0) {
+          setStoryData(response.data[0]);
+        }
+      })
+      .catch(() => {
+        // Silently fail, no error handling
+      });
+  }, []);
+
+  if (!storyData) {
+    return <div className="min-h-[300px]"></div>;
+  }
+
+  const bgUrl = storyBg?.src || storyBg;
+
+  return (
+    <div
+      className="flex flex-col items-center justify-center rounded-sm overflow-hidden shadow-lg"
+      style={{
+        background: `url(${bgUrl})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        width: "100%",
+        height: "100%",
+      }}
+    >
+      <div className="flex flex-col md:flex-row w-full items-start justify-center px-8 pt-8">
+        <div className="w-full md:w-1/2 lg:w-1/2 pr-0 md:pr-8 flex-shrink-0">
+          <img
+            src={storyData.image}
+            className="object-cover w-full h-auto border-[13px] border-white shadow-md"
+            alt="Our Story"
+          />
+        </div>
+
+        <div className="w-full flex flex-col items-start my-auto justify-center md:w-1/2 lg:w-1/2 pt-6 md:pt-0">
+          <h2 className="text-left text-2xl md:text-3xl font-semibold text-white" dangerouslySetInnerHTML={{__html: storyData.title}} />
+          <p className="text-left text-white my-4 leading-relaxed" dangerouslySetInnerHTML={{__html: storyData.description_first}} />
+          <p className="text-left text-white my-4 leading-relaxed" dangerouslySetInnerHTML={{__html: storyData.description_second}} />
+        </div>
+      </div>
+
+      <div className="w-full px-8 py-2">
+        <p className="text-left text-white my-4 leading-relaxed" dangerouslySetInnerHTML={{__html: storyData.description_third}} />
+      </div>
+    </div>
+  );
+};
+
+export default Story;

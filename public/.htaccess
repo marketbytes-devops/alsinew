@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+
+ # Redirect non-www to www
+ RewriteCond %{HTTP_HOST} ^alsiglobal\.com [NC]
+ RewriteRule ^(.*)$ https://www.alsiglobal.com/$1 [L,R=301]
+
+ # Redirect HTTP to HTTPS
+ RewriteCond %{HTTPS} off
+ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+ # Do not rewrite existing files or folders
+ RewriteCond %{REQUEST_FILENAME} -f [OR]
+ RewriteCond %{REQUEST_FILENAME} -d
+ RewriteRule ^ - [L]
+
+ # EXPLICIT: allow /email/* to bypass React routing
+ RewriteRule ^email/ - [L]
+
+ # Fallback to index.html for SPA routing
+ RewriteRule . /index.html [L]
+</IfModule>

@@ -1,0 +1,365 @@
+@import "tailwindcss";
+@source "../..";
+
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins", sans-serif;
+  }
+
+  h1 {
+    font-size: 70px;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: 66px;
+    font-weight: 800;
+  }
+
+  h3 {
+    font-size: 60px;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 50px;
+    font-weight: 600;
+  }
+
+  h5 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  h6 {
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 16.5px;
+  }
+
+  button {
+    background-color: transparent;
+    background-image: none;
+    outline: none;
+  }
+
+  button:focus,
+  button:active {
+    background-color: transparent;
+    background-image: none;
+    outline: none;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  @media (max-width: 1024px) {
+    h1 {
+      font-size: 70px;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: 70px;
+      font-weight: 800;
+    }
+
+    h3 {
+      font-size: 60px;
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: 50px;
+      font-weight: 600;
+    }
+
+    h5 {
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    h6 {
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 16.5px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    h5 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    h6 {
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    h5 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    h6 {
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2044a2;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #193377;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.button {
+  background-color: #2044a2;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #2044a2;
+  font-size: 15px;
+  padding: 12px 22px;
+}
+
+.read-more-btn {
+  color: #193377;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.input {
+  border: 1px solid #a7a7a7;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+ul {
+  list-style: disc;
+}
+
+.blog-detail-content ul {
+  list-style-position: inside;
+  padding-left: 5px;
+}
+
+.blog-detail-content li {
+  margin-bottom: 0.5rem;
+}
+
+.ql-size-small {
+  font-size: 14px;
+}
+
+.ql-size-normal {
+  font-size: 16.5px;
+}
+
+.ql-size-large {
+  font-size: 20px;
+}
+
+.ql-size-huge {
+  font-size: 30px;
+}
+
+@media (max-width: 1200px) {
+  .ql-size-small {
+    font-size: 14px;
+  }
+
+  .ql-size-normal {
+    font-size: 16.5px;
+  }
+
+  .ql-size-large {
+    font-size: 20px;
+  }
+
+  .ql-size-huge {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ql-size-small {
+    font-size: 13px;
+  }
+
+  .ql-size-normal {
+    font-size: 15.5px;
+  }
+
+  .ql-size-large {
+    font-size: 19px;
+  }
+
+  .ql-size-huge {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ql-size-small {
+    font-size: 16px;
+  }
+
+  .ql-size-normal {
+    font-size: 18.5px;
+  }
+
+  .ql-size-large {
+    font-size: 22px;
+  }
+
+  .ql-size-huge {
+    font-size: 32px;
+  }
+}
+
+.primary-text {
+  color: #212529;
+}
+
+.custom-link-color a {
+  color: #2044a2 !important;
+  text-decoration: none;
+}
+
+.custom-link-color a:hover {
+  color: #2044a2 !important;
+  text-decoration: underline;
+}
+
+svg g {
+  outline: none;
+}
+
+svg g:focus {
+  outline: none;
+}
+
+svg g:focus-visible {
+  outline: none;
+}
+
+.slick-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.h6-style-as-h2 {
+  font-size: 30px !important;
+  font-weight: 400 !important;
+  font-family: "Poppins", sans-serif !important;
+  text-transform: none !important;
+  line-height: normal !important;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .h6-style-as-h2 {
+    font-size: 24px !important;
+  }
+}

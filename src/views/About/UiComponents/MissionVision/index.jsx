@@ -1,0 +1,95 @@
+'use client';
+
+import React, { useEffect, useState } from "react";
+import apiClient from "../../../../api";
+import Title from "../../../../components/Title";
+
+const MissionVision = () => {
+  const [title, setTitle] = useState("Mission Vision Purpose");
+  const [entries, setEntries] = useState([]);
+  const [isLoadingTitle, setIsLoadingTitle] = useState(true);
+  const [isLoadingEntries, setIsLoadingEntries] = useState(true);
+
+  useEffect(() => {
+    const fetchTitle = async () => {
+      try {
+        const response = await apiClient.get("/about/mission/");
+        const data = response.data;
+
+        if (data && data.length > 0 && data[0].title) {
+          setTitle(data[0].title);
+        } else {
+          setTitle("Mission Vision Purpose");
+        }
+      } catch (err) {
+        // Silently fail, no error handling
+      } finally {
+        setIsLoadingTitle(false);
+      }
+    };
+
+    const fetchEntries = async () => {
+      try {
+        const response = await apiClient.get("/about/mission-entries/");
+        const data = response.data;
+
+        if (data && data.length > 0) {
+          setEntries(data);
+        }
+      } catch (err) {
+        // Silently fail, no error handling
+      } finally {
+        setIsLoadingEntries(false);
+      }
+    };
+
+    fetchTitle();
+    fetchEntries();
+  }, []);
+
+  if (isLoadingTitle || isLoadingEntries) {
+    return <div className="min-h-[100px]"></div>;
+  }
+
+  if (!entries.length) {
+    return <div></div>;
+  }
+
+  return (
+    <>
+      <div className="pb-4">
+        <Title title={title} />
+      </div>
+      <div className="flex flex-col md:flex-row md:justify-center md:space-x-6 space-y-6 md:space-y-0">
+        {entries.map((entry) => (
+          <div
+            className="flex flex-col items-center rounded-lg shadow-lg p-6 w-full md:w-1/3 text-center bg-[linear-gradient(180deg,rgba(25,51,119,0.85),rgba(0,154,219,0.85))] hover:bg-[linear-gradient(to_right,rgba(25,51,119,0.85),rgba(0,154,219,0.85))] hover:scale-105 transform transition-all duration-300"
+            key={entry.id}
+            style={{
+              color: "white",
+              minHeight: "auto",
+            }}
+          >
+            {entry.image && (
+              <img
+                src={entry.image}
+                alt={`${entry.title} image`}
+                className="mt-4 h-16 w-16 object-contain"
+              />
+            )}
+            <h3
+              className="text-xl font-bold mt-4"
+              dangerouslySetInnerHTML={{ __html: entry.title }}
+            />
+            <p
+              className="mt-4 leading-relaxed text-sm md:text-base"
+              dangerouslySetInnerHTML={{ __html: entry.description }}
+            />
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default MissionVision;
