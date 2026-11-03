@@ -86,7 +86,7 @@ export default function RootLayout({ children }) {
             {/* Google Tag Manager */}
             <Script
               id="gtm-script"
-              strategy="afterInteractive"
+              strategy="lazyOnload"
               dangerouslySetInnerHTML={{
                 __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -111,12 +111,12 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 
             {/* Google tag (gtag.js) */}
             <Script
-              strategy="afterInteractive"
+              strategy="lazyOnload"
               src="https://www.googletagmanager.com/gtag/js?id=G-TV46Y6L6V3"
             />
             <Script
               id="google-analytics"
-              strategy="afterInteractive"
+              strategy="lazyOnload"
               dangerouslySetInnerHTML={{
                 __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -147,8 +147,7 @@ gtag('config', 'G-TV46Y6L6V3');`,
                   s1.async = true;
                   s1.src = 'https://embed.tawk.to/6590263c8d261e1b5f4d9c4b/1hithanq2';
                   s1.charset = 'UTF-8';
-                  s1.setAttribute('crossorigin', '*');
-                  document.head.appendChild(s1);
+                                    document.head.appendChild(s1);
 
                   // Poptin
                   var s2 = document.createElement("script");

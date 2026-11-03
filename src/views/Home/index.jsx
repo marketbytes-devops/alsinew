@@ -114,6 +114,7 @@ const Home = () => {
   }, []);
 
   const servicesSliderSettings = {
+    accessibility: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
@@ -240,6 +241,7 @@ const Home = () => {
   }, []);
 
   const highlightsSlickSettings = {
+    accessibility: false,
     dots: false,
     infinite: true,
     speed: 300,
@@ -293,6 +295,7 @@ const Home = () => {
   }, []);
 
   const industriesSlickSettings = {
+    accessibility: false,
     arrows: true,
     infinite: true,
     speed: 300,
@@ -444,7 +447,7 @@ const Home = () => {
                   dangerouslySetInnerHTML={{ __html: bannerData.description }}
                 />
                 <div className="flex items-center justify-center lg:justify-start">
-                  <Link href={removeHtmlTags(bannerData?.link_url)?.startsWith("/") ? removeHtmlTags(bannerData?.link_url) : `/${removeHtmlTags(bannerData?.link_url) || "about-us"}`} className="text-[#212529] text-sm font-medium mr-3 flex items-center group">
+                  <Link href={removeHtmlTags(bannerData?.link_url)?.startsWith("/") ? removeHtmlTags(bannerData?.link_url) : `/${removeHtmlTags(bannerData?.link_url) || "about-us"}`} aria-label="Read more about ALSI Global" className="text-[#212529] text-sm font-medium mr-3 flex items-center group">
                     {removeHtmlTags(bannerData.link_name)}
                     <FontAwesomeIcon icon={faArrowRight} className="ml-2 rounded-full px-3 py-3 text-white bg-[#2044a2] group-hover:text-[#2044a2] group-hover:bg-white border border-transparent group-hover:border-[#2044a2] transform transition-all" />
                   </Link>
@@ -493,11 +496,11 @@ const Home = () => {
             </Slider>}
             {servicesData.length > 0 && (
               <div className="flex justify-center pt-8 space-x-4">
-                <button className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full"
+                <button aria-label="Previous service slide" className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full"
                   onClick={() => servicesSliderRef.current.slickPrev()}>
                   <FontAwesomeIcon icon={faArrowLeft} />
                 </button>
-                <button className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full"
+                <button aria-label="Next service slide" className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full"
                   onClick={() => servicesSliderRef.current.slickNext()}>
                   <FontAwesomeIcon icon={faArrowRight} />
                 </button>
@@ -655,10 +658,10 @@ const Home = () => {
                   ))}
                 </Swiper>
                 <div className="flex justify-center mt-4 space-x-4 pt-8">
-                  <button className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full" ref={prevRef}>
+                  <button aria-label="Previous differentiator slide" className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full" ref={prevRef}>
                     <FontAwesomeIcon icon={faArrowLeft} />
                   </button>
-                  <button className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full" ref={nextRef}>
+                  <button aria-label="Next differentiator slide" className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full" ref={nextRef}>
                     <FontAwesomeIcon icon={faArrowRight} />
                   </button>
                 </div>
@@ -755,11 +758,11 @@ const Home = () => {
                   ))}
                 </Slider>}
                 <div className="flex justify-center space-x-4 pt-10">
-                  <button className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full"
+                  <button aria-label="Previous highlight slide" className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full"
                     onClick={() => highlightsSliderRef.current.slickPrev()}>
                     <FontAwesomeIcon icon={faArrowLeft} />
                   </button>
-                  <button className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full"
+                  <button aria-label="Next highlight slide" className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full"
                     onClick={() => highlightsSliderRef.current.slickNext()}>
                     <FontAwesomeIcon icon={faArrowRight} />
                   </button>
@@ -805,11 +808,11 @@ const Home = () => {
                 ))}
               </Slider>}
               <div className="flex justify-center space-x-4 pt-2 md:pt-8">
-                <button className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full"
+                <button aria-label="Previous industry slide" className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full"
                   onClick={() => industriesSliderRef.current.slickPrev()}>
                   <FontAwesomeIcon icon={faArrowLeft} />
                 </button>
-                <button className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full"
+                <button aria-label="Next industry slide" className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full"
                   onClick={() => industriesSliderRef.current.slickNext()}>
                   <FontAwesomeIcon icon={faArrowRight} />
                 </button>
@@ -859,10 +862,10 @@ const Home = () => {
                     ))}
                   </Swiper>
                   <div className="flex justify-center mt-4 space-x-4 pt-8">
-                    <button className="bg-gray-100 hover:bg-[#2044a2] hover:text-white w-10 h-10 rounded-full" ref={blogPrevRef}>
+                    <button aria-label="Previous blog slide" className="bg-gray-100 hover:bg-[#2044a2] hover:text-white w-10 h-10 rounded-full" ref={blogPrevRef}>
                       <FontAwesomeIcon icon={faArrowLeft} />
                     </button>
-                    <button className="bg-gray-100 hover:bg-[#2044a2] hover:text-white w-10 h-10 rounded-full" ref={blogNextRef}>
+                    <button aria-label="Next blog slide" className="bg-gray-100 hover:bg-[#2044a2] hover:text-white w-10 h-10 rounded-full" ref={blogNextRef}>
                       <FontAwesomeIcon icon={faArrowRight} />
                     </button>
                   </div>
@@ -884,7 +887,7 @@ const Home = () => {
                 </div>
 
                 <div className="md:grid justify-center items-center mt-12 hidden">
-                  <Link href={blogUrl} className="text-white text-sm font-medium mr-3 flex items-center">
+                  <Link href={blogUrl} aria-label="Read more market updates" className="text-white text-sm font-medium mr-3 flex items-center">
                     Read More
                     <FontAwesomeIcon icon={faAngleRight} className="ml-2 rounded-full px-[12px] py-[10px] text-[#2044a2] bg-white hover:bg-[#2044a2] hover:text-white transform transition-all" />
                   </Link>

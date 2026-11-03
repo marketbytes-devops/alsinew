@@ -26,13 +26,13 @@ const Nav = ({ toggleSidebar }) => {
         }`}
       >
         <div
-          className={`flex items-center justify-end pr-8 sm:pr-8 lg:pr-24 relative left-2 transition-all duration-300 overflow-hidden ${
-            isScrolled ? "max-h-0 opacity-0 py-0" : "max-h-10 opacity-100 py-1"
+          className={`h-7 flex items-center justify-end pr-8 sm:pr-8 lg:pr-24 relative left-2 transition-all duration-300 overflow-hidden ${
+            isScrolled ? "max-h-0 opacity-0 py-0" : "max-h-7 opacity-100 py-1"
           }`}
         >
           <SocialLink className="text-gray-500" />
         </div>
-        <div className="flex justify-between items-center px-4 sm:px-4 md:px-16 lg:px-20 py-4">
+        <div className="min-h-[80px] flex justify-between items-center px-4 sm:px-4 md:px-16 lg:px-20 py-4">
           <Link href="/">
             <img 
               src={logo.src || logo} 
@@ -45,6 +45,7 @@ const Nav = ({ toggleSidebar }) => {
           
           <button 
             onClick={toggleSidebar}
+            aria-label="Toggle navigation menu"
             className="z-50 p-2"
             style={{ 
               background: "none", 
