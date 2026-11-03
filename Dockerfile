@@ -6,7 +6,7 @@ WORKDIR /app
 # 2. Dependencies stage
 FROM base AS deps
 COPY package.json package-lock.json* ./
-RUN npm ci
+RUN npm install --legacy-peer-deps
 
 # 3. Builder stage
 FROM base AS builder
@@ -54,3 +54,4 @@ USER nextjs
 EXPOSE 3000
 
 CMD ["node", "server.js"]
+
