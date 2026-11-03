@@ -113,7 +113,7 @@ const Navbar = ({ toggleSidebar }) => {
         </div>
         <div className="flex justify-between items-center pl-4 sm:pl-4 md:pl-16 lg:pl-28 py-1">
           <Link href="/">
-            <img src={logo.src || logo} alt="Logo" className="h-16 sm:h-16 md:h-20 lg:h-20" />
+            <img src={logo.src || logo} alt="ALSI Logo" width={128} height={179} className="h-16 sm:h-16 md:h-20 lg:h-20 w-auto" />
           </Link>
           <div className="flex items-center">
             <nav className="flex items-center gap-6 pr-4 sm:pr-4 md:pr-16 lg:pr-28">

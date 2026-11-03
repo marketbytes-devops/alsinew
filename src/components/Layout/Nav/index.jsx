@@ -36,8 +36,10 @@ const Nav = ({ toggleSidebar }) => {
           <Link href="/">
             <img 
               src={logo.src || logo} 
-              alt="Logo" 
-              className="h-16 sm:h-16 md:h-20 lg:h-20" 
+              alt="ALSI Logo" 
+              width={128}
+              height={179}
+              className="h-16 sm:h-16 md:h-20 lg:h-20 w-auto" 
             />
           </Link>
           

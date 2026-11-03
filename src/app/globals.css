@@ -13,7 +13,7 @@
   h4,
   h5,
   h6 {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-poppins), "Poppins", sans-serif;
   }
 
   h1 {
@@ -352,7 +352,7 @@ svg g:focus-visible {
 .h6-style-as-h2 {
   font-size: 30px !important;
   font-weight: 400 !important;
-  font-family: "Poppins", sans-serif !important;
+  font-family: var(--font-poppins), "Poppins", sans-serif !important;
   text-transform: none !important;
   line-height: normal !important;
   padding-bottom: 10px;

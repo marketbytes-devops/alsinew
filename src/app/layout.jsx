@@ -1,6 +1,14 @@
 import "./globals.css";
 import Script from "next/script";
+import { Poppins } from "next/font/google";
 import Layout from "@/components/Layout";
+
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+});
 
 export const metadata = {
   metadataBase: new URL("https://www.alsiglobal.com"),
@@ -71,11 +79,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={poppins.variable}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
         {process.env.NODE_ENV === "production" && (
           <>
             {/* Google Tag Manager */}
@@ -94,7 +99,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             {/* Microsoft Clarity */}
             <Script
               id="clarity-script"
-              strategy="afterInteractive"
+              strategy="lazyOnload"
               dangerouslySetInnerHTML={{
                 __html: `(function(c,l,a,r,i,t,y){
 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -119,33 +124,45 @@ gtag('js', new Date());
 gtag('config', 'G-TV46Y6L6V3');`,
               }}
             />
-
-            {/* Poptin */}
-            <Script
-              id="pixel-script-poptin"
-              strategy="lazyOnload"
-              src="https://cdn.popt.in/pixel.js?id=6ec3668313c4e"
-            />
           </>
         )}
       </head>
-      <body>
-        {/* Tawk.to Chat Widget */}
+      <body className={poppins.className}>
+        {/* Deferred interactive customer support and widgets */}
         <Script
-          id="tawk-to"
+          id="deferred-interactive-widgets"
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
-            __html: `var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-if (window.tawkLoaded) return;
-window.tawkLoaded = true;
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6590263c8d261e1b5f4d9c4b/1hithanq2';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();`,
+            __html: `
+              (function() {
+                var loaded = false;
+                function loadWidgets() {
+                  if (loaded) return;
+                  loaded = true;
+
+                  // Tawk.to Chat Widget
+                  window.Tawk_API = window.Tawk_API || {};
+                  window.Tawk_LoadStart = new Date();
+                  var s1 = document.createElement("script");
+                  s1.async = true;
+                  s1.src = 'https://embed.tawk.to/6590263c8d261e1b5f4d9c4b/1hithanq2';
+                  s1.charset = 'UTF-8';
+                  s1.setAttribute('crossorigin', '*');
+                  document.head.appendChild(s1);
+
+                  // Poptin
+                  var s2 = document.createElement("script");
+                  s2.async = true;
+                  s2.src = 'https://cdn.popt.in/pixel.js?id=6ec3668313c4e';
+                  document.head.appendChild(s2);
+                }
+
+                ['scroll', 'touchstart', 'mousemove', 'keydown', 'click'].forEach(function(e) {
+                  window.addEventListener(e, loadWidgets, { once: true, passive: true });
+                });
+                setTimeout(loadWidgets, 4500);
+              })();
+            `,
           }}
         />
 

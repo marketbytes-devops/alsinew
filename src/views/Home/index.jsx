@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect, useRef } from "react";
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -30,7 +31,7 @@ import Form from "../../components/UiComponents/Form";
 
 const DEFAULT_BANNER = {
   id: 3,
-  image: "https://www.alsibackend.com/media/banner/home_banner.webp",
+  image: "/images/home_banner.webp",
   title: "<h1><strong>Complete Logistics</strong></h1><h1><strong>Solutions</strong></h1>",
   subtitle: "<h6>Reliable. Efficient. Seamless.</h6>",
   description: "<p>ALSI: Your dedicated partner for comprehensive logistics services and solutions. With expertise in customs clearance, transportation, freight forwarding, project cargo services and warehousing, we optimize your supply chain. Partner with ALSI and experience hassle-free logistics that help achieve your business goals.</p>",
@@ -68,7 +69,15 @@ const Home = () => {
   const [bannerData, setBannerData] = useState(DEFAULT_BANNER);
   useEffect(() => {
     apiClient.get("/home/banner/")
-      .then((response) => setBannerData(response.data[0]))
+      .then((response) => {
+        if (response.data && response.data.length > 0) {
+          const item = response.data[0];
+          if (item.image && item.image.includes("home_banner.webp")) {
+            item.image = "/images/home_banner.webp";
+          }
+          setBannerData(item);
+        }
+      })
       .catch();
   }, []);
 
@@ -339,7 +348,7 @@ const Home = () => {
         }
       });
 
-    const fetchPosts = apiClient.get("market/blog-entries/")
+    const fetchPosts = apiClient.get("market/blog-entries/?limit=4")
       .then(response => {
         setBlogPosts(response.data || []);
         sessionStorage.setItem("blogPosts", JSON.stringify(response.data || []));
@@ -444,10 +453,14 @@ const Home = () => {
 
               {/* Image Section */}
               <div className="w-full lg:w-[55%] mt-0 -mb-20 sm:-mb-0 sm:mt-20 xl:-mt-10 px-6 lg:px-0 flex justify-center lg:justify-end lg:absolute lg:right-4 lg:top-24 z-20 pointer-events-none">
-                <img
+                <Image
                   src={bannerData.image}
-                  className="w-full h-[300px] sm:h-[440px] lg:h-[620px] object-contain "
-                  alt={removeHtmlTags(bannerData.title)}
+                  alt={removeHtmlTags(bannerData.title) || "ALSI Logistics Solutions"}
+                  width={680}
+                  height={620}
+                  priority
+                  className="w-full h-[300px] sm:h-[440px] lg:h-[620px] object-contain"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 55vw"
                 />
               </div>
             </div>
@@ -469,7 +482,7 @@ const Home = () => {
                   <Link href={service.link}>
                     <div className="relative p-6 bg-white text-center h-auto sm:h-[300px] md:h-[350px] lg:h-[350px] xl:h-[350px] hover:scale-[1.05] transition-transform duration-500 shadow-xl shadow-gray-300">
                       <div className="text-6xl flex items-center justify-center mb-4 py-8 relative top-0">
-                        <img src={service.image} className="w-16 h-16 object-contain" alt={service.title} />
+                        <img src={service.image} className="w-16 h-16 object-contain" alt={service.title} width={64} height={64} loading="lazy" decoding="async" />
                       </div>
                       <div className="text-2xl font-bold text-[#193579] relative top-0" dangerouslySetInnerHTML={{ __html: service.title }} />
                       <div className="text-[#6a6d78] py-1 relative top-0" dangerouslySetInnerHTML={{ __html: service.subtitle }} />
@@ -634,7 +647,7 @@ const Home = () => {
                       <div className='flex flex-col items-center justify-center'>
                         <div className='rounded-full w-40 h-40 p-16 mt-4' style={{ background: "radial-gradient(at left, #1d346e, #027eb4)" }}>
                           <img src={entry.image} alt={removeHtmlTags(entry.differentiator_title)}
-                            className='w-10 h-10 object-contain scale-100 hover:scale-110 transition-all duration-300' />
+                            className='w-10 h-10 object-contain scale-100 hover:scale-110 transition-all duration-300' width={40} height={40} loading='lazy' decoding='async' />
                         </div>
                         <div className='mt-4 text-[16px] uppercase font-bold px-20 text-center' dangerouslySetInnerHTML={{ __html: entry.differentiator_title }} />
                       </div>
@@ -657,7 +670,7 @@ const Home = () => {
                     <div className='flex items-center justify-center h-[180px] w-full'>
                       <div className='rounded-full p-8 transition-all duration-300' style={{ background: "radial-gradient(at left, #1d346e, #027eb4)" }}>
                         <img src={entry.image} alt={removeHtmlTags(entry.differentiator_title)}
-                          className='w-10 h-10 object-contain scale-100 group-hover:scale-110 transition-all duration-300' />
+                          className='w-10 h-10 object-contain scale-100 group-hover:scale-110 transition-all duration-300' width={40} height={40} loading='lazy' decoding='async' />
                       </div>
                     </div>
                     <div className='w-full px-4 h-[80px] flex items-start justify-center'>
@@ -685,7 +698,7 @@ const Home = () => {
                   }}>
                     {achievement.image ? (
                       <img src={achievement.image} alt={removeHtmlTags(achievement.description || "Achievement image")}
-                        className="w-full h-auto object-cover" />
+                        className="w-full h-auto object-cover" width={350} height={175} loading="lazy" decoding="async" />
                     ) : <div className="text-center text-gray-500">No image available</div>}
                   </div>
                   <div className="text-center mt-4">
@@ -780,7 +793,7 @@ const Home = () => {
                           <div className="relative h-[300px] sm:h-[350px] md:h-[280px] lg:h-[320px] w-full mt-4">
                             <img src={entry.image}
                               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 rounded-md"
-                              alt={entry.title} />
+                              alt={entry.title} width={400} height={320} loading="lazy" decoding="async" />
                             <div className="absolute -top-2 -right-2 bg-gray-50 shadow-sm shadow-gray-700 w-14 h-12 flex justify-center items-center">
                               <p className="lg:text-lg md:text-lg sm:text-sm">{entry.entry_number}.</p>
                             </div>
@@ -834,7 +847,7 @@ const Home = () => {
                       <SwiperSlide key={post.blog_slug}>
                         <div className="bg-white p-2 rounded-md overflow-hidden">
                           {post.image ? (
-                            <img src={post.image} alt={post.blog_title} className="w-full h-56 object-cover" style={{ borderRadius: "8px" }} />
+                            <img src={post.image} alt={post.blog_title} className="w-full h-56 object-cover" style={{ borderRadius: "8px" }} width={380} height={224} loading="lazy" decoding="async" />
                           ) : <div className="text-center text-gray-500">No image available</div>}
                           <p className="text-lg text-[#212529] font-bold p-2" dangerouslySetInnerHTML={{ __html: truncateText(post.blog_title, 79) }} />
                           <p className="text-[#212529] font-medium text-sm mb-4 px-2" dangerouslySetInnerHTML={{ __html: truncateText(post.description, 95) }} />
@@ -859,7 +872,7 @@ const Home = () => {
                   {blogPosts.slice(0, 4).map((post) => (
                     <div key={post.id} className="bg-white rounded-md hover:scale-[1.02] transition-scale duration-300 overflow-hidden">
                       {post.image ? (
-                        <img src={post.image} alt={post.blog_title} className="w-full h-56 object-cover p-2" style={{ borderRadius: "8px" }} />
+                        <img src={post.image} alt={post.blog_title} className="w-full h-56 object-cover p-2" style={{ borderRadius: "8px" }} width={380} height={224} loading="lazy" decoding="async" />
                       ) : <div className="text-center text-gray-500">No image available</div>}
                       <div className="p-3">
                         <p className="text-[#212529] text-lg font-bold mb-2" dangerouslySetInnerHTML={{ __html: truncateText(post.blog_title, 58) }} />

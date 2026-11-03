@@ -67,7 +67,7 @@ const Footer = () => {
   return (
     <footer className="bg-white text-zinc-800">
       <div className="container mx-auto py-4 text-center">
-        <img src={Logo.src || Logo} className="mx-auto mb-6 mt-2 w-24 md:w-28 lg:w-32" alt="ALSI Logo" />
+        <img src={Logo.src || Logo} className="mx-auto mb-6 mt-2 w-24 md:w-28 lg:w-32 h-auto" width={128} height={179} loading="lazy" decoding="async" alt="ALSI Logo" />
       </div>
       <div className="container mx-auto flex flex-wrap justify-center gap-8 py-6 px-4 sm:px-8 md:px-16">
         {regionsToDisplay.map((region) => (
