@@ -14,8 +14,25 @@ const Industries = () => {
   const [title, setTitle] = useState("");
   const [industries, setIndustries] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
 
   const sliderRef = useRef(null);
+
+  useEffect(() => {
+    setIsMounted(true);
+    const updateDimensions = () => {
+      if (typeof window !== "undefined") {
+        const width = window.innerWidth;
+        setIsMobile(width < 768);
+        setIsTablet(width >= 768 && width < 1024);
+      }
+    };
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
 
   useEffect(() => {
     const fetchTitleAndIndustries = async () => {
@@ -52,20 +69,33 @@ const Industries = () => {
   }
 
   const slickSettings = {
+    accessibility: false,
     arrows: true, 
-    infinite: true,
+    infinite: industries.length > 1,
     speed: 300,
-    slidesToShow: 4,
+    slidesToShow: isMobile ? 1 : (isTablet ? 2 : 4),
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
         }
       },
       {
         breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
         }
@@ -82,55 +112,66 @@ const Industries = () => {
       {isLoading ? (
         <div></div>
       ) : (
-        <div className="relative lg:px-[130px] md:px-[130px] sm:px-4">
-          <Slider ref={sliderRef} {...slickSettings}>
-            {industries.map((entry, index) => (
-              <div key={`${entry.id}-${index}`}>
-                <Link href={entry.path_name || "#"}>
-                  <div className="relative px-2 flex flex-col items-center justify-center bg-white text-center h-[680px] sm:h-[680px] md:lg:h-[700px] lg:h-[700px] overflow-hidden">
-                    <div className="absolute top-5 px-6 sm:px-6 lg:px-2">
-                      <div className="flex items-center mb-2 sm:mb-4 md:mb-4">
+        <div className="relative px-4 sm:px-4 md:px-[130px] lg:px-[130px]">
+          {isMounted && (
+            <Slider
+              key={`industries-slider-${isMobile ? "m" : (isTablet ? "t" : "d")}`}
+              ref={sliderRef}
+              {...slickSettings}
+            >
+              {industries.map((entry, index) => (
+                <div key={`${entry.id}-${index}`} className="px-2 sm:px-4">
+                  <Link href={entry.path_name || "#"}>
+                    <div className="flex flex-col bg-white h-[650px] sm:h-[700px] md:h-[680px] lg:h-[720px] xl:h-[720px] rounded-lg overflow-hidden">
+                      <div className="flex-grow px-2 sm:px-4 pt-4">
+                        <div className="flex items-center mb-4">
+                          <div
+                            dangerouslySetInnerHTML={{ __html: entry.title }}
+                            className="text-left text-2xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-[#212529] mr-3"
+                          />
+                          <div className="flex-1 h-[4px] bg-[#00008E] rounded"></div>
+                        </div>
+
                         <div
-                          dangerouslySetInnerHTML={{ __html: entry.title }}
-                          className="text-left text-2xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-[#212529] mr-3"
+                          dangerouslySetInnerHTML={{ __html: entry.description }}
+                          className="text-left text-[#212529] text-sm md:text-base lg:text-lg leading-relaxed"
                         />
-                        <div className="flex-1 h-[4px] bg-[#00008E] w-auto rounded"></div>
                       </div>
 
-                      <div
-                        dangerouslySetInnerHTML={{ __html: entry.description }}
-                        className="text-left text-[#212529] sm:text-sm md:text-base lg:text-lg"
-                      />
-                    </div>
-                    <div className="relative bottom-0 flex flex-col items-center justify-center w-full md:w-full lg:w-full">
-                      <div className="absolute -top-20 sm:-top-20 lg:top-10 flex flex-col items-center justify-center w-full">
-                        <img
-                          src={entry.image}
-                          className="w-full mt-4 md:mt-0 px-4 md:px-0 h-[380px] md:h-[300px] lg:h-[300px] xl:h-[300px] object-cover bg-cover grayscale hover:grayscale-0 transition-all duration-500 rounded-md"
-                          alt={entry.title?.replace(/<[^>]*>/g, "") || "Industry"}
-                        />
-                      </div>
-                      <div className="absolute -top-[75px] right-2 sm:-top-[75px] sm:right-2 md:top-8 md:-right-3 lg:top-8 lg:-right-3 bg-gray-50 shadow-sm shadow-gray-700 w-14 h-12 flex justify-center items-center">
-                        <p className="lg:text-lg md:text-lg sm:text-sm">
-                          {entry.entry_number}{"."}
-                        </p>
+                      <div className="relative mt-auto">
+                        <div className="relative h-[300px] sm:h-[350px] md:h-[280px] lg:h-[320px] w-full mt-4">
+                          <img
+                            src={entry.image}
+                            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 rounded-md"
+                            alt={entry.title?.replace(/<[^>]*>/g, "") || "Industry"}
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <div className="absolute top-4 right-4 bg-gray-50/95 backdrop-blur-sm shadow-md w-12 h-10 flex justify-center items-center rounded">
+                            <p className="text-base font-bold text-[#193579]">
+                              {entry.entry_number}.
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </Slider>
+                  </Link>
+                </div>
+              ))}
+            </Slider>
+          )}
 
           <div className="flex justify-center space-x-4 pt-10">
             <button
-              className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full"
+              aria-label="Previous industry slide"
+              className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full flex items-center justify-center"
               onClick={() => sliderRef.current?.slickPrev()}  
             >
               <FontAwesomeIcon icon={faArrowLeft} />
             </button>
             <button
-              className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full"
+              aria-label="Next industry slide"
+              className="bg-gray-100 hover:bg-[#2044a2] hover:text-white hover:border-none transform transition-transform border-2 border-gray-300 text-gray-800 w-10 h-10 rounded-full flex items-center justify-center"
               onClick={() => sliderRef.current?.slickNext()}  
             >
               <FontAwesomeIcon icon={faArrowRight} />

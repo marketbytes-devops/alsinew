@@ -27,9 +27,23 @@ const OurNetwork = () => {
   const [activeCountry, setActiveCountry] = useState("Sultanate of Oman");
   const [activeTooltip, setActiveTooltip] = useState("ksa-tooltip");
   const [countryData, setCountryData] = useState({});
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
   const sliderRef = useRef(null);
   const [isMounted, setIsMounted] = useState(false);
-  useEffect(() => { setIsMounted(true); }, []);
+  useEffect(() => {
+    setIsMounted(true);
+    const updateDimensions = () => {
+      if (typeof window !== "undefined") {
+        const width = window.innerWidth;
+        setIsMobile(width < 768);
+        setIsTablet(width >= 768 && width < 1024);
+      }
+    };
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
 
   useEffect(() => {
     const data = {
@@ -125,10 +139,11 @@ const OurNetwork = () => {
 
   // Slick Slider settings
   const sliderSettings = {
+    accessibility: false,
     dots: true,
     infinite: offices.length > 4,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: isMobile ? 1 : (isTablet ? 2 : 4),
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -331,7 +346,7 @@ const OurNetwork = () => {
           Offices in {location || "Select a Country"}
         </h2>
         <div className="max-w-4xl mx-auto">
-          {isMounted && <Slider ref={sliderRef} {...sliderSettings}>
+          {isMounted && <Slider key={`offices-slider-${isMobile ? "m" : (isTablet ? "t" : "d")}`} ref={sliderRef} {...sliderSettings}>
             {offices &&
               offices.map((office) => (
                 <div
