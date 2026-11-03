@@ -1,0 +1,20 @@
+services:
+  alsi-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: alsi-website
+    restart: unless-stopped
+    ports:
+      - "3006:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+      - API_BACKEND_URL=https://www.alsibackend.com/api
+      - NEXT_PUBLIC_API_BASE_URL=/api/
+      - NEXT_PUBLIC_RECAPTCHA_SITE_KEY=6Lf_TOQqAAAAAD3PGDryVnbbvXp8MJBL2XtZqKIQ
+      - NEXT_PUBLIC_GTM_ID=GTM-NTVRNF6T
+    env_file:
+      - path: .env
+        required: false
