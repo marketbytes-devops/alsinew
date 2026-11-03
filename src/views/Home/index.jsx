@@ -41,8 +41,21 @@ const DEFAULT_BANNER = {
 
 const Home = () => {
   const [isMounted, setIsMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
   useEffect(() => {
     setIsMounted(true);
+    const updateDimensions = () => {
+      if (typeof window !== "undefined") {
+        const width = window.innerWidth;
+        setIsMobile(width < 768);
+        setIsTablet(width >= 768 && width < 1024);
+      }
+    };
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
   }, []);
   const removeHtmlTags = (str) => {
     return str ? str.replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ") : "";
@@ -115,7 +128,7 @@ const Home = () => {
 
   const servicesSliderSettings = {
     accessibility: false,
-    slidesToShow: 3,
+    slidesToShow: isMobile ? 1 : (isTablet ? 2 : 3),
     slidesToScroll: 1,
     infinite: true,
     speed: 300,
@@ -123,8 +136,9 @@ const Home = () => {
     autoplaySpeed: 3000,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 600, settings: { slidesToShow: 1 } },
       { breakpoint: 768, settings: { slidesToShow: 1 } },
+      { breakpoint: 600, settings: { slidesToShow: 1 } },
+      { breakpoint: 480, settings: { slidesToShow: 1 } },
     ],
   };
 
@@ -299,7 +313,7 @@ const Home = () => {
     arrows: true,
     infinite: true,
     speed: 300,
-    slidesToShow: 4,
+    slidesToShow: isMobile ? 1 : (isTablet ? 2 : 4),
     slidesToScroll: 1,
     responsive: [
       {
@@ -315,13 +329,7 @@ const Home = () => {
         },
       },
       {
-        breakpoint: 425,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 320,
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
         },
@@ -478,8 +486,8 @@ const Home = () => {
           <div className="text-center mt-4 mb-4 sm:mb-4 md:mb-8">
             <Title title={servicesTitle} />
           </div>
-          <div className="relative lg:px-36 md:px-36 sm:px-4 -mt-4 sm:-mt-0">
-            {isMounted && <Slider ref={servicesSliderRef} {...servicesSliderSettings}>
+          <div className="relative px-4 sm:px-4 md:px-36 lg:px-36 -mt-4 sm:-mt-0">
+            {isMounted && <Slider key={`services-${isMobile ? "m" : (isTablet ? "t" : "d")}`} ref={servicesSliderRef} {...servicesSliderSettings}>
               {servicesData.map((service, index) => (
                 <div key={index}>
                   <Link href={service.link}>
@@ -778,7 +786,7 @@ const Home = () => {
           </div>
           {!isLoadingIndustries && industries.length > 0 && (
             <div className="relative">
-              {isMounted && <Slider ref={industriesSliderRef} {...industriesSlickSettings}>
+              {isMounted && <Slider key={`industries-${isMobile ? "m" : (isTablet ? "t" : "d")}`} ref={industriesSliderRef} {...industriesSlickSettings}>
                 {industries.map((entry, index) => (
                   <div key={`${entry.id}-${index}`} className="px-2 sm:px-4">
                     <Link href={entry.path_name}>
