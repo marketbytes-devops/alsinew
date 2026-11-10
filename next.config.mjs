@@ -10,6 +10,19 @@ const nextConfig = {
       { protocol: 'http', hostname: '127.0.0.1' },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow, noarchive, nosnippet',
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       {

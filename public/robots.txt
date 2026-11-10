@@ -1,3 +1,9 @@
-# Staging / Testing Mode: Do not index until marketing team approves
+# Staging / Testing Mode: Strictly noindex and disallow for Digital Marketing Team review
 User-agent: *
+Disallow: /
+
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Bingbot
 Disallow: /
